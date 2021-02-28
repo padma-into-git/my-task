@@ -1,0 +1,24 @@
+{
+  "name": "test-suite",
+  "version": "1.0.0",
+  "description": "Test suite for React Redux Registration Login App",
+  "main": "index.js",
+  "scripts": {
+    "clean:artifacts": "rm -rf reports/** screenshots/**",
+    "test": "npm run clean:artifacts && NODE_ENV=test node_modules/.bin/testcafe modules/*.js -c 4",
+    "test:e2e": "npm run clean:artifacts && NODE_ENV=test node_modules/.bin/testcafe modules/EndToEndTests.js",
+    "test:registration-page": "npm run clean:artifacts && NODE_ENV=test node_modules/.bin/testcafe modules/RegistrationPageTests.js",
+    "test:login-page": "npm run clean:artifacts && NODE_ENV=test node_modules/.bin/testcafe modules/LoginPageTests.js",
+    "test:home-page": "npm run clean:artifacts && NODE_ENV=test node_modules/.bin/testcafe modules/HomePageTests.js"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120
+  },
+  "author": "Padmavathy Jayakumar",
+  "license": "ISC",
+  "devDependencies": {
+    "testcafe": "^1.11.0",
+    "testcafe-reporter-html": "^1.4.6"
+  }
+}

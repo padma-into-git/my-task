@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestCafe Tests: Chrome 88.0.4324.192 / macOS 10.15.7" tests="7" failures="1" skipped="0" errors="1" time="36.875" timestamp="Sun, 28 Feb 2021 14:18:54 GMT" >
+  <testcase classname="RegistrationPageTests" name="Verify End to End Flow" time="36.776">
+  </testcase>
+  <testcase classname="HomePageTests" name="Verify Delete user Functionality" time="36.525">
+  </testcase>
+  <testcase classname="HomePageTests" name="Verify Logout Functionality" time="35.934">
+  </testcase>
+  <testcase classname="LoginPageTests" name="Verify Login with valid userName and password" time="35.901">
+  </testcase>
+  <testcase classname="LoginPageTests" name="Verify Error message for invalid username and invalid password (screenshots: /Users/padma/Desktop/My Github Projects/my-task/screenshots/2021-02-28_15-18-17/test-5/Chrome_88.0.4324.192_macOS_10.15.7/errors/1.png)" time="31.311">
+    <failure>
+    <![CDATA[
+      1) AssertionError: expected 'Username or password is incorrect' to deeply equal 'User or
+      password is incorrect'
+
+         + expected - actual
+
+         -'Username or password is incorrect'
+         +'User or password is incorrect'
+
+
+         Browser: Chrome 88.0.4324.192 / macOS 10.15.7
+         Screenshot: /Users/padma/Desktop/My Github
+      Projects/my-task/screenshots/2021-02-28_15-18-17/test-5/Chrome_88.0.4324.192_macOS_10.15.7/errors/1.png
+
+            15 |  async verifyLoginPage(t) {
+            16 |    return t.expect(this.loginHeader.visible).ok('', { timeout: 2000 });
+            17 |  }
+            18 |
+            19 |  async verifyInvalidLoginErrorMessage(t) {
+          > 20 |    await t.expect(this.incorrectCredentialsMessage.innerText).eql('User or
+      password is incorrect');
+            21 |  }
+            22 |
+            23 |  async fillOutLoginFormAndSubmit(t, userName, password) {
+            24 |    await typeText(t, this.userNameInput, userName);
+            25 |    await typeText(t, this.passwordInput, password);
+
+            at <anonymous> (/Users/padma/Desktop/My Github
+      Projects/my-task/page-models/pages/LoginPage.js:20:64)
+            at asyncGeneratorStep (/Users/padma/Desktop/My Github
+      Projects/my-task/page-models/pages/LoginPage.js:2:158)
+            at _next (/Users/padma/Desktop/My Github
+      Projects/my-task/page-models/pages/LoginPage.js:2:496)
+            at <anonymous> (/Users/padma/Desktop/My Github
+      Projects/my-task/page-models/pages/LoginPage.js:2:661)
+            at <anonymous> (/Users/padma/Desktop/My Github
+      Projects/my-task/page-models/pages/LoginPage.js:2:402)
+            at LoginPage.verifyInvalidLoginErrorMessage (/Users/padma/Desktop/My Github
+      Projects/my-task/page-models/pages/LoginPage.js:19:43)
+            at <anonymous> (/Users/padma/Desktop/My Github
+      Projects/my-task/modules/LoginPageTests.js:26:19)
+            at asyncGeneratorStep (/Users/padma/Desktop/My Github
+      Projects/my-task/modules/LoginPageTests.js:4:158)
+            at _next (/Users/padma/Desktop/My Github
+      Projects/my-task/modules/LoginPageTests.js:4:496)
+    ]]>
+    </failure>
+  </testcase>
+  <testcase classname="RegistrationPageTests" name="Verify Routing back to Login Page on cancelling the Registration" time="24.728">
+  </testcase>
+  <testcase classname="RegistrationPageTests" name="Verify Successful Registration on Filling &amp; submitting the Registration" time="23.198">
+  </testcase>
+</testsuite>

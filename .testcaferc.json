@@ -1,0 +1,18 @@
+{
+    "screenshots": {
+      "path": "screenshots/",
+      "takeOnFails": true
+    },
+    "reporter": [
+      "list",
+      {
+        "name": "html",
+        "output": "./reports/testcafe-report.html"
+      },
+      {
+        "name": "xunit",
+        "output": "./reports/testcafe-report.xml"
+      }
+    ],
+    "browsers": "chrome"
+  }
