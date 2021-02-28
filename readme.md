@@ -20,7 +20,7 @@
 
         npm start
 
-5.  Clone the Repository from URL "https://github.com/padma-into-git/myTask.git"
+5.  Clone the Repository from URL "https://github.com/padma-into-git/my-task.git"
 
 6.  Navigate to the Cloned Repository Path in the Terminal
 
