@@ -48,7 +48,7 @@
 
           npm run test:registration-page
 
-    **Task 1 - Test Registration Functionality**:
+    **Task 1 - Test Login Functionality**:
 
           npm run test:login-page
 
