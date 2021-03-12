@@ -90,5 +90,3 @@
 **utility:** Contains Utility Files for some Common Functions
 
 **Package.json:** This will help to make it easy for others to manage and install the dependencies.
-
-    **I am ready to show a Demo/Code Walkthrough for a better understanding.**
